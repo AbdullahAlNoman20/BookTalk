@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredBook } from "./localstorage";
+import BookList from "./Components/BookList";
 
 const ListedBooks = () => {
   const books = useLoaderData();
 
   const [bookListed, setBookListed] = useState([]);
+  const [displayBooks, setDisplayBooks] = useState([]);
 
   useEffect(() => {
     const storedBookId = getStoredBook();
@@ -17,9 +19,10 @@ const ListedBooks = () => {
 
       //    console.log (books,listedBooks,storedBookId)
       setBookListed(listedBooks);
+      setDisplayBooks(listedBooks);
       // console.log(bookListed)
     }
-  },[books]);
+  }, [books]);
 
   return (
     <div>
@@ -49,13 +52,11 @@ const ListedBooks = () => {
         </div>
       </div>
 
-      <h1>Listed Book: {bookListed.length}</h1>
+      <h1 className="mx-20 font-bold">Listed Book's : {bookListed.length}</h1>
+
       <div className="">
-        {bookListed.map((book) => (
-          <li key={book.id}>
-            {" "}
-            <span>{book.book_name}</span>
-          </li>
+        {displayBooks.map((book) => (
+          <BookList key={book.id} book={book}></BookList>
         ))}
       </div>
     </div>
