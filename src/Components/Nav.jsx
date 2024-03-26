@@ -93,7 +93,7 @@ const Nav = () => {
           </label>
           </div>
           
-          <a className="btn btn-outline btn-warning">Sign In</a>
+          <a className="btn btn-outline btn-success">Sign In</a>
           <a className="btn btn-outline btn-warning">Sign Up</a>
         </div>
       </div>

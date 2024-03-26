@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
 
 const Book = ({ book }) => {
-  const { image, book_name, author, rating, category } = book;
+  const {id, image, book_name, author, rating, category } = book;
 
   return (
     <div className="my-5">
 
 
-      <NavLink to="/bookdetails">
+      <NavLink to={`/book/${id}`}>
         <div className="card w-96 shadow-xl border-2 p-5 border-orange-100 h-[450px]">
           <figure className="rounded-2xl">
             <img src={book.image} alt="Shoes" />
