@@ -11,6 +11,8 @@ import ListedBooks from './ListedBooks.jsx';
 import PageToRead from './PageToRead.jsx';
 import ErrorElement from './Components/ErrorElement.jsx';
 import BookDetails from './Components/BookDetails.jsx';
+import Offers from './Components/Offers.jsx';
+import TermsAndConditions from './Components/TermsAndConditions.jsx';
 
 
 
@@ -39,6 +41,15 @@ const router = createBrowserRouter([
         path:'/book/:id',
         element: <BookDetails></BookDetails>,
         loader: () => fetch('./books.json')
+      },
+      {
+        path:'/offers',
+        element:<Offers></Offers>,
+        loader: () => fetch('./offer.json')
+      },
+      {
+        path:'/terms',
+        element:<TermsAndConditions></TermsAndConditions>
       }
     ]
   },
