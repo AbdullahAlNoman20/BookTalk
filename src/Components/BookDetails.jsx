@@ -30,9 +30,7 @@ const BookDetails = () => {
     if (!clickBtn) {
       toast.success("Added in Wish-List");
       setClickBtn(true);
-    } 
-
-    else {
+    } else {
       toast.warn("Already Added");
     }
   };
@@ -52,6 +50,11 @@ const BookDetails = () => {
             <p className="py-6">Category: {book.category}</p>
             <hr />
             <p>Review: {book.review}</p>
+            <div className="">
+              {book.tags.map((tag) => (
+                <span key={book.id} className="bg-orange-100 rounded-full p-1 mr-2 my-3"> #{tag} </span>
+              ))}
+            </div>
             <p>Tags: {book.tags}</p>
             <hr />
             <div className="">
