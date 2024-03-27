@@ -2,7 +2,7 @@
     {
       "id": 1,
       "offer_name": "Spring Sale",
-      "img": "https://i.ibb.co/yVt3Z6c/download.png",
+      "img": "https://i.ibb.co/Rh1PF0T/1.jpg",
       "percentage": 25,
       "duration": "1 week",
       "description": "Enjoy our Spring Sale with a 25% discount on selected books!",
@@ -12,7 +12,7 @@
     {
       "id": 2,
       "offer_name": "Summer Special",
-      "img": "https://i.ibb.co/BzkyzKw/61-O6-K0y-Pmz-L-AC-UF1000-1000-QL80.jpg",
+      "img": "https://i.ibb.co/jJx2c5h/2.png",
       "percentage": 50,
       "duration": "3 days",
       "description": "Beat the heat with our Summer Special offer! Get 50% off on all eBooks.",
@@ -22,7 +22,7 @@
     {
       "id": 3,
       "offer_name": "Back-to-School Deal",
-      "img": "https://i.ibb.co/qpBpYGM/Screenshot-2020-11-15-at-3-07-47-PM.png",
+      "img": "https://i.ibb.co/1zX5Trg/3.jpg",
       "percentage": 20,
       "duration": "2 weeks",
       "description": "Get ready for the new school year with our Back-to-School Deal! Save 20% on textbooks.",
