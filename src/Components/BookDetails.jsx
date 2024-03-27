@@ -1,33 +1,41 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { saveBook } from "../localstorage";
+import { useState } from "react";
 
 const BookDetails = () => {
   const books = useLoaderData();
   const { id } = useParams();
   const idInt = parseInt(id);
-  const book = books.find(book => book.id === idInt);
+  const book = books.find((book) => book.id === idInt);
 
   //   console.log(book);
 
+  const [clickReadBtn, setClickReadBtn] = useState(false);
+  const [clickBtn, setClickBtn] = useState(false);
 
+  const handleRead = () => {
+    if (!clickReadBtn) {
+      toast.success("Added in Read List");
+      saveBook(idInt);
+      setClickReadBtn(true);
+      setClickBtn(true);
+    } else {
+      toast.warn("Already Added in Read");
+    }
+  };
 
-  const handleRead = () =>{
+  const handleWishList = () => {
+    if (!clickBtn) {
+      toast.success("Added in Wish-List");
+      setClickBtn(true);
+    } 
 
-    saveBook(idInt);
-
-    toast.success("You Read it");
-  }
-
-
-const handleWishList = () =>{
-    toast.success("Added in Wish-List");
-  }
-
-
-
-
+    else {
+      toast.warn("Already Added");
+    }
+  };
 
   return (
     <div className="mx-3 md:mx-20 rounded-2xl">
@@ -65,8 +73,18 @@ const handleWishList = () =>{
               </p>
             </div>
             <div className=" flex gap-4">
-              <button onClick={handleRead} className="btn btn-outline btn-success">Read</button>
-              <button onClick={handleWishList} className="btn btn-outline btn-warning">Wishlist</button>
+              <button
+                onClick={handleRead}
+                className="btn btn-outline btn-success"
+              >
+                Read
+              </button>
+              <button
+                onClick={handleWishList}
+                className="btn btn-outline btn-warning"
+              >
+                Wishlist
+              </button>
             </div>
           </div>
         </div>
