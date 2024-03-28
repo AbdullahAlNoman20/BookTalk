@@ -25,11 +25,11 @@ const ListedBooks = () => {
   }, [books]);
 
   return (
-    <div>
-      <div className="text-center text-5xl font-extrabold bg-slate-200 p-10 mx-20 rounded-xl">
-        |Books|
-      </div>
 
+  
+    <div>
+
+{/* Shorting Button */}
       <div className="flex justify-center mt-10">
         <div className="dropdown bg-orange-400 rounded-xl">
           <div tabIndex={0} role="button" className="btn m-1">
@@ -51,18 +51,46 @@ const ListedBooks = () => {
           </ul>
         </div>
       </div>
-      <div className=" flex justify-start mt-10">
-        <NavLink>
-          <h1 className="ml-5 md:ml-20 font-bold border-t-2 rounded-xl border-x-2 border-orange-400 p-2 md:p-4">
-            Listed Book's : {bookListed.length}
-          </h1>
-        </NavLink>
-      </div>
-      <div className=" border-t-2 border-green-600 rounded-3xl md:mx-12">
+
+
+{/* Experiment */}
+          <div className=" md:mx-20 ">
+          <div role="tablist" className="tabs tabs-lifted">
+          <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Listed Book's" checked />
+          <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+            
+
+
+          Listed Book's : {bookListed.length}
+          <div className="  md:mx-12">
         {displayBooks.map((book) => (
           <BookList key={book.id} book={book}></BookList>
         ))}
       </div>
+            
+            
+            
+            </div>
+
+          <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Wish List"  />
+          <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+            
+
+
+
+            
+            No Wish List Selected Yet
+            
+            
+            
+            
+            </div>
+
+          </div>
+          </div>
+
+
+
     </div>
   );
 };
