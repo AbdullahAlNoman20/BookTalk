@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import { getStoredBook } from "./localstorage";
 import BookList from "./Components/BookList";
 
@@ -51,10 +51,14 @@ const ListedBooks = () => {
           </ul>
         </div>
       </div>
-
-      <h1 className="mx-20 font-bold">Listed Book's : {bookListed.length}</h1>
-
-      <div className="">
+      <div className=" flex justify-start mt-10">
+        <NavLink>
+          <h1 className="ml-5 md:ml-20 font-bold border-t-2 rounded-xl border-x-2 border-orange-400 p-2 md:p-4">
+            Listed Book's : {bookListed.length}
+          </h1>
+        </NavLink>
+      </div>
+      <div className=" border-t-2 border-green-600 rounded-3xl md:mx-12">
         {displayBooks.map((book) => (
           <BookList key={book.id} book={book}></BookList>
         ))}

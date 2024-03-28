@@ -22,7 +22,7 @@ const BookDetails = () => {
       setClickReadBtn(true);
       setClickBtn(true);
     } else {
-      toast.warn("Already Added in Read");
+      toast.warn("Already Added in Read list");
     }
   };
 
@@ -31,7 +31,7 @@ const BookDetails = () => {
       toast.success("Added in Wish-List");
       setClickBtn(true);
     } else {
-      toast.warn("Already Added");
+      toast.warn("Already Added Or Exist on Read list");
     }
   };
 
@@ -44,36 +44,42 @@ const BookDetails = () => {
           </div>
 
           <div>
-            <h1 className="text-5xl font-bold">{book.book_name}</h1>
-            <p className="py-6">Author: {book.author}</p>
+            <h1 className="text-5xl font-bold"> {book.book_name}</h1>
+            <p className="py-6"><span className="font-bold">Author: </span>{book.author}</p>
             <hr />
-            <p className="py-6">Category: {book.category}</p>
+            <p className="py-6"><span className="font-bold">Category: </span>{book.category}</p>
             <hr />
-            <p>Review: {book.review}</p>
-            <div className="">
-              {book.tags.map((tag) => (
-                <span key={book.id} className="bg-orange-100 rounded-full p-1 mr-2 my-3"> #{tag} </span>
-              ))}
+            <p><span className="font-bold">Review: </span>  {book.review}</p>
+            <div className=" flex items-center gap-2 my-5">
+            <span className="font-bold">Tags: </span>
+            <p className="flex gap-1">
+                {book.tags.map((tag) => (
+                  <span
+                    key={book.id}
+                    className="bg-base-200 rounded-full p-1 text-orange-300"
+                  >
+                    #{tag}{" "}
+                  </span>
+                ))}
+              </p>
             </div>
-            <p>Tags: {book.tags}</p>
             <hr />
-            <div className="">
+            <div className=" flex flex-col gap-4 my-7">
               <p>
-                <span>Total Pages:</span>
+              <span className="font-bold">Total Pages: </span>
                 {book.total_pages}
               </p>
               <p>
-                <span>publisher: </span>
+              <span className="font-bold">Publisher: </span>
                 {book.publisher}
               </p>
               <p>
-                <span>year Of Publishing: </span>
+              <span className="font-bold">Year Of Publishing: </span>
                 {book.yearOfPublishing}
               </p>
               <p>
-                <span>rating: </span>
-                {book.rating}
-              </p>
+              <span className="font-bold">Rating: </span> 
+                {book.rating} <i class="fa-regular fa-star"></i> </p>
             </div>
             <div className=" flex gap-4">
               <button
@@ -84,7 +90,7 @@ const BookDetails = () => {
               </button>
               <button
                 onClick={handleWishList}
-                className="btn btn-outline btn-warning"
+                className="btn btn-warning"
               >
                 Wishlist
               </button>

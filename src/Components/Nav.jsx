@@ -67,7 +67,7 @@ const Nav = () => {
         </div>
         <div className="navbar-end gap-5">
           <a className="btn btn-outline btn-success">Sign In</a>
-          <a className="btn btn-outline btn-warning">Sign Up</a>
+          <a className="btn btn-warning">Sign Up</a>
         </div>
       </div>
     </div>
