@@ -33,7 +33,7 @@ const ListedBooks = () => {
       <div className="flex justify-center mt-10">
         <div className="dropdown bg-orange-400 rounded-xl">
           <div tabIndex={0} role="button" className="btn m-1">
-            Click
+            Short By 
           </div>
           <ul
             tabIndex={0}

@@ -6,7 +6,7 @@
 const OfferCard = ({offer}) => {
   return (
     <div  className="">
-      <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800 h-96">
+      <div className="border flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800 h-96">
         <img
           src={offer.img}
           alt=""

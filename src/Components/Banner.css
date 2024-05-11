@@ -1,0 +1,7 @@
+.background-image {
+    background-image: url("/src/assets/Banner-img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px; /* You can adjust the height as needed */
+}

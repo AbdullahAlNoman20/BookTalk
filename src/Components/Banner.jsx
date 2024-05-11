@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
   return (
@@ -11,8 +12,22 @@ const Banner = () => {
           />
           <div className="md:ml-20">
             <h1 className="text-5xl font-bold">
-              <span className="text-orange-400">BookTalk:</span> Where Every
-              Page Holds a Conversation
+              <span className="text-orange-400">BookTalk:</span>
+              <span
+                className="hidden lg:block"
+                style={{ color: "black", fontWeight: "bold" }}
+              >
+                {/* Style will be inherited from the parent element */}
+                <Typewriter
+                  words={["Where EveryPage Holds a Conversation Adventure"]}
+                  loop={""}
+                  cursor
+                  cursorStyle="✒️"
+                  typeSpeed={20}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </span>
             </h1>
             <p className="py-6 text-justify">
               Discover BookTalk: Where books come to life through vibrant
@@ -22,7 +37,9 @@ const Banner = () => {
             </p>
 
             <NavLink to="/listed">
-              <button className="btn btn-outline btn-warning">View This List</button>
+              <button className="btn btn-outline btn-warning">
+                View This List
+              </button>
             </NavLink>
           </div>
         </div>

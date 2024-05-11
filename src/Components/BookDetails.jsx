@@ -36,7 +36,7 @@ const BookDetails = () => {
   };
 
   return (
-    <div className="mx-3 md:mx-20 rounded-2xl">
+    <div className="mx-3 md:mx-20 rounded-2xl border">
       <div className="hero rounded-2xl">
         <div className="hero-content flex-col lg:flex-row gap-16">
           <div className=" p-8 bg-base-200 rounded-xl">

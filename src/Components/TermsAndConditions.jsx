@@ -1,7 +1,7 @@
 const TermsAndConditions = () => {
   return (
     <div>
-      <section className="dark:bg-gray-100 dark:text-gray-800">
+      <section className="dark:bg-gray-50 dark:text-gray-800">
         <div className="container max-w-5xl px-4 py-12 mx-auto">
           <div className="grid gap-4 mx-4 sm:grid-cols-12">
             <div className="col-span-12 sm:col-span-3">

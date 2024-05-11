@@ -3,7 +3,7 @@
 const Chart = () => {
     return (
         <div>
-            <h1>Statistics and Bar chart will be updated later</h1>
+            <h1>Statistical Representation</h1>
         </div>
     );
 };

@@ -13,6 +13,8 @@ import ErrorElement from './Components/ErrorElement.jsx';
 import BookDetails from './Components/BookDetails.jsx';
 import Offers from './Components/Offers.jsx';
 import TermsAndConditions from './Components/TermsAndConditions.jsx';
+import Login from './Components/Login.jsx';
+import Register from './Components/Register.jsx';
 
 
 
@@ -50,6 +52,14 @@ const router = createBrowserRouter([
       {
         path:'/terms',
         element:<TermsAndConditions></TermsAndConditions>
+      },
+      {
+        path:'/login',
+        element: <Login></Login>
+      },
+      {
+        path:'/register',
+        element: <Register></Register>
       }
     ]
   },

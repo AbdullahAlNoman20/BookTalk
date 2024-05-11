@@ -66,8 +66,13 @@ const Nav = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end gap-5">
-          <a className="btn btn-outline btn-success">Sign In</a>
-          <a className="btn btn-warning">Sign Up</a>
+          <NavLink to="/login">
+            <a className="btn btn-outline btn-success">Sign In</a>
+          </NavLink>
+
+          <NavLink to="/register">
+            <a className="btn btn-warning">Sign Up</a>
+          </NavLink>
         </div>
       </div>
     </div>
