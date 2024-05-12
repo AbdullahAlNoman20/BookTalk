@@ -37,7 +37,7 @@ const Banner = () => {
             </p>
 
             <NavLink to="/listed">
-              <button className="btn btn-outline btn-warning">
+              <button className="btn btn-outline btn-success">
                 View This List
               </button>
             </NavLink>

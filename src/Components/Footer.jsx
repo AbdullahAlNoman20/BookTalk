@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </nav>
         <aside>
-          <p>Copyright © 2024 - All right reserved by Software Development LTD.</p>
+          <p>Copyright © 2024 - All right reserved by <span className="text-red-700">"ABN"</span> Software Development LTD.</p>
         </aside>
       </footer>
     </div>
